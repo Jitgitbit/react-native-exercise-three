@@ -1,15 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Home from './screens/Home';
 import * as Font from 'expo-font';
 
+const getFonts = () => Font.loadAsync({
+  'nunito-regular' : require('./assets/fonts/Nunito/Nunito-Regular.ttf'),
+  'nunito-bold' : require('./assets/fonts/Nunito/Nunito-Bold.ttf')
+})
+
 export default function App() {
 
-  const getFonts = () => Font.loadAsync({
-      'nunito-regular' : require('./assets/fonts/Nunito/Nunito-Regular.ttf'),
-      'nunito-bold' : require('./assets/fonts/Nunito/Nunito-Bold.ttf')
-    })
+  const [fontsLoaded, setFontsLoaded] = useState(false)
 
-  return (
-    <Home/>
-  );
+  if(fontsLoaded){
+    return (
+      <Home/>
+    );
+  }else{}
 }
