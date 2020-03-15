@@ -4,7 +4,7 @@ import { StyleSheet } from 'react-native'
 export const globalStyles = StyleSheet.create({
   container:{
     flex:1,
-    padding:44,
+    padding:22,
   },
   titleText:{
     fontFamily:'nunito-bold',
