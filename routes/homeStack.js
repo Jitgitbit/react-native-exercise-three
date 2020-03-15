@@ -1,9 +1,9 @@
 import { createStackNavigator } from "react-navigation-stack";
-import Home from "../screens/Home";
-import ReviewDetails from "../screens/ReviewDetails";
+import Home from "../components/screens/Home";
+import ReviewDetails from "../components/screens/ReviewDetails";
 // import {createAppContainer} from 'react-navigation';
 import React from 'react'
-import Header from "../shared/Header";
+import Header from "../components/shared/Header";
 
 const screens = {
   Home:{

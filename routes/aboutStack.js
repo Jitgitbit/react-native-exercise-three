@@ -1,7 +1,7 @@
 import { createStackNavigator } from "react-navigation-stack";
-import About from "../screens/About";
+import About from "../components/screens/About";
 import React from 'react'
-import Header from "../shared/Header";
+import Header from "../components/shared/Header";
 
 const screens = {
   About:{

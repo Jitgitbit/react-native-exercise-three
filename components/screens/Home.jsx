@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { View, Text, StyleSheet, Button } from 'react-native'
-import { globalStyles } from '../styles/global'
+import { globalStyles } from '../../styles/global'
 import { FlatList, TouchableOpacity } from 'react-native-gesture-handler'
 
 export default function Home({navigation}) {
