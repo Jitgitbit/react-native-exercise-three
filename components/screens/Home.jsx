@@ -6,9 +6,9 @@ import Card from '../shared/Card'
 
 export default function Home({navigation}) {
   const [reviews, setReviews] = useState([
-    {title:'Maverick', rating:5, body:'not bad', key:'1'},
-    {title:'Good Midnight', rating:6, body:'not too bad', key:'2'},
-    {title:'Lord of the Rings', rating:7, body:'too long', key:'3'}
+    {title:'Maverick', rating:2, body:'not bad', key:'1'},
+    {title:'Good Midnight', rating:3, body:'not too bad', key:'2'},
+    {title:'Lord of the Rings', rating:4, body:'too long', key:'3'}
   ])
   // const pressHandler = () => {
   //   navigation.navigate('ReviewDetails'); // does the same as .push !!
