@@ -5,10 +5,16 @@ import {createAppContainer} from 'react-navigation';
 
 const screens = {
   Home:{
-    screen: Home                           // SEQUENCE MATTERS !!!!!
+    screen: Home,
+    navigationOptions:{
+      title:'MovieZone'
+    }                           // SEQUENCE MATTERS !!!!!
   },
   ReviewDetails:{
-    screen: ReviewDetails
+    screen: ReviewDetails,
+    navigationOptions:{
+      title:'Review Details'
+    }
   }
 }
 
