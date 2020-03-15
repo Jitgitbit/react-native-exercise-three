@@ -11,6 +11,6 @@ export default function Home() {
 
 const styles = StyleSheet.create({
   container:{
-    padding:24,
+    padding:44,
   }
 })
