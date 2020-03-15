@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { View, Text, StyleSheet, Button } from 'react-native'
+import { View, Text, StyleSheet, Button, ImageBackground } from 'react-native'
 import { globalStyles } from '../../styles/global'
 import { FlatList, TouchableOpacity } from 'react-native-gesture-handler'
 import Card from '../shared/Card'
