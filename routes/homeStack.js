@@ -2,12 +2,14 @@ import { createStackNavigator } from "react-navigation-stack";
 import Home from "../screens/Home";
 import ReviewDetails from "../screens/ReviewDetails";
 // import {createAppContainer} from 'react-navigation';
+import React from 'react'
+import Header from "../shared/Header";
 
 const screens = {
   Home:{
     screen: Home,
     navigationOptions:{
-      title:'MovieZone',
+      headerTitle: () => <Header/>
       // headerStyle:{
       //   backgroundColor: '#eee'
       // }

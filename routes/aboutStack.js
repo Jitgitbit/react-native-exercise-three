@@ -1,11 +1,13 @@
 import { createStackNavigator } from "react-navigation-stack";
 import About from "../screens/About";
+import React from 'react'
+import Header from "../shared/Header";
 
 const screens = {
   About:{
     screen: About,
     navigationOptions:{
-      title:'About MovieZone',
+      headerTitle:() => <Header/>
     }                           
   }
 }
