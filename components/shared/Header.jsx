@@ -30,10 +30,11 @@ const styles = StyleSheet.create({
     fontSize:20,
     color:'#333',
     letterSpacing:1,
-    marginLeft:70              // little trick to frustrate juniors: switch this to paddingLeft and it will be unpressable !!! HA HA !!
+    // marginLeft:70              // -----> little trick to frustrate juniors: switch this to paddingLeft and it will be unpressable !!! HA HA !!
   },
   icon:{
     position:'absolute',
-    left:16,
+    left:-50,
+    marginLeft:5,
   }
 })

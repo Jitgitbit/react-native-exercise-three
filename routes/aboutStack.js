@@ -22,7 +22,8 @@ const AboutStack = createStackNavigator(screens, {
     headerStyle:{
       backgroundColor:'yellow'
     },
-    headerTintColor:'darkblue',
+    // headerTintColor:'darkblue',
+    headerTitleAlign:'center',
   }
 });
 
