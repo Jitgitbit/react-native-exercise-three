@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import {MaterialIcons} from '@expo/vector-icons';
+import { AuthSession } from 'expo';
 
 export default function Header({navigation, title}) {
   const openMenu = () => {

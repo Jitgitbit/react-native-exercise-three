@@ -33,7 +33,7 @@ const HomeStack = createStackNavigator(screens, {
     headerStyle:{
       backgroundColor:'yellow'
     },
-    headerTintColor:'darkblue'
+    headerTintColor:'darkblue',
   }
 });
 
