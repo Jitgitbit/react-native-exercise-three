@@ -1,12 +1,16 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
+import {MaterialIcons} from '@expo/vector-icons';
 
-export default function Header() {
+export default function Header({navigation, title}) {
+  const openMenu = () => {
+    navigation.openDrawer()
+  };
   return (
     <View style={styles.header}>
-      {/* icon for the menu */}
+      <MaterialIcons name='menu' size={28} style={styles.icon} onPress={openMenu}/>
       <View>
-        <Text style={styles.headerText}>MovieZone</Text>
+        <Text style={styles.headerText}>{title}</Text>
       </View>
     </View>
   )
@@ -25,5 +29,10 @@ const styles = StyleSheet.create({
     fontSize:20,
     color:'#333',
     letterSpacing:1,
+    marginLeft:70              // little trick to frustrate juniors: switch this to paddingLeft and it will be unpressable !!! HA HA !!
+  },
+  icon:{
+    position:'absolute',
+    left:16,
   }
 })

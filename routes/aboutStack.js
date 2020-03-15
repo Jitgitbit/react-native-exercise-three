@@ -6,8 +6,13 @@ import Header from "../shared/Header";
 const screens = {
   About:{
     screen: About,
-    navigationOptions:{
-      headerTitle:() => <Header/>
+    navigationOptions: ({navigation}) => {
+      return {
+        headerTitle: () => <Header navigation={navigation} title='About MovieZone'/>     // essential for passing navigation, it has to be a return !!!
+      }
+      // headerStyle:{
+      //   backgroundColor: '#eee'
+      // }
     }                           
   }
 }
