@@ -4,7 +4,7 @@ import { globalStyles } from '../styles/global'
 import { FlatList, TouchableOpacity } from 'react-native-gesture-handler'
 
 export default function Home({navigation}) {
-  const [review, setReview] = useState([
+  const [reviews, setReviews] = useState([
     {title:'Maverick', rating:5, body:'not bad', key:'1'},
     {title:'Good Midnight', rating:6, body:'not too bad', key:'2'},
     {title:'Lord of the Rings', rating:7, body:'too long', key:'3'}
