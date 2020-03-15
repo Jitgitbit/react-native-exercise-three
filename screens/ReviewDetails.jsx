@@ -1,11 +1,16 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, Button } from 'react-native'
 import { globalStyles } from '../styles/global'
 
-export default function ReviewDetails() {
+export default function ReviewDetails({navigation}) {
+  const pressHandler = () => {
+    navigation.goBack(); // does the same as .push !!
+    // navigation.push('ReviewDetails');
+  }
   return (
     <View style={globalStyles.container}>
       <Text>ReviewDetails Screen</Text>
+      <Button title='go to overview' onPress={pressHandler}/>
     </View>
   )
 }
