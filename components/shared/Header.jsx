@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, Image } from 'react-native'
 import {MaterialIcons} from '@expo/vector-icons';
 import { AuthSession } from 'expo';
 
@@ -10,7 +10,8 @@ export default function Header({navigation, title}) {
   return (
     <View style={styles.header}>
       <MaterialIcons name='menu' size={28} style={styles.icon} onPress={openMenu}/>
-      <View>
+      <View style={styles.headerTitle}>
+        <Image source={require('../../assets/heart_logo.png')} style={styles.headerImage}/>
         <Text style={styles.headerText}>{title}</Text>
       </View>
     </View>
@@ -36,5 +37,13 @@ const styles = StyleSheet.create({
     position:'absolute',
     left:-50,
     marginLeft:5,
+  },
+  headerTitle:{
+    flexDirection:'row',
+  },
+  headerImage:{
+    width:26,
+    height:26,
+    marginHorizontal:10,
   }
 })
