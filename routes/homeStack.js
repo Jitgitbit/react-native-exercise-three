@@ -5,7 +5,7 @@ import {createAppContainer} from 'react-navigation';
 
 const screens = {
   Home:{
-    screen: Home
+    screen: Home                           // SEQUENCE MATTERS !!!!!
   },
   ReviewDetails:{
     screen: ReviewDetails
