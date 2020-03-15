@@ -7,13 +7,19 @@ const screens = {
   Home:{
     screen: Home,
     navigationOptions:{
-      title:'MovieZone'
+      title:'MovieZone',
+      headerStyle:{
+        backgroundColor: '#eee'
+      }
     }                           // SEQUENCE MATTERS !!!!!
   },
   ReviewDetails:{
     screen: ReviewDetails,
     navigationOptions:{
-      title:'Review Details'
+      title:'Review Details',
+      headerStyle:{
+        backgroundColor: '#eee'
+      }
     }
   }
 }
