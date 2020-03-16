@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { View, Text, StyleSheet, Button, ImageBackground } from 'react-native'
+import { View, Text, StyleSheet, Button, ImageBackground, Modal } from 'react-native'
 import { globalStyles } from '../../styles/global'
 import { FlatList, TouchableOpacity } from 'react-native-gesture-handler'
 import Card from '../shared/Card'
@@ -16,6 +16,11 @@ export default function Home({navigation}) {
   // }
   return (
     <View style={globalStyles.container}>
+      <Modal visible={true}>
+        <View style={styles.modalContent}>
+          <Text>Hello from the modal :)</Text>
+        </View>
+      </Modal>
       {/* <Text style={globalStyles.titleText}>Home Screen</Text>
       <Button title='go to review details' onPress={pressHandler}/> */}
       <FlatList
@@ -30,3 +35,9 @@ export default function Home({navigation}) {
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  modalContent:{
+    alignItems:'center'
+  }
+})
