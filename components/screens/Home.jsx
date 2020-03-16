@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Button, ImageBackground, Modal } from 'react-na
 import { globalStyles } from '../../styles/global'
 import { FlatList, TouchableOpacity } from 'react-native-gesture-handler'
 import Card from '../shared/Card'
+import {MaterialIcons} from '@expo/vector-icons'
 
 export default function Home({navigation}) {
   const [modalOpen, setModalOpen] = useState(false)
@@ -22,6 +23,11 @@ export default function Home({navigation}) {
           <Text>Hello from the modal :)</Text>
         </View>
       </Modal>
+      <MaterialIcons
+      name='add'
+      size={24}
+      onPress={() => setModalOpen(true)}
+      />
       {/* <Text style={globalStyles.titleText}>Home Screen</Text>
       <Button title='go to review details' onPress={pressHandler}/> */}
       <FlatList
