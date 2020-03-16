@@ -23,6 +23,7 @@ export default function Home({navigation}) {
           <MaterialIcons
           name='close'
           size={24}
+          style={{ ...styles.modalToggle, ...styles.modalClose}}
           onPress={() => setModalOpen(false)}
           />
           <Text>Hello from the modal :)</Text>
@@ -31,6 +32,7 @@ export default function Home({navigation}) {
       <MaterialIcons
       name='add'
       size={24}
+      style={styles.modalToggle}
       onPress={() => setModalOpen(true)}
       />
       {/* <Text style={globalStyles.titleText}>Home Screen</Text>
@@ -50,6 +52,18 @@ export default function Home({navigation}) {
 
 const styles = StyleSheet.create({
   modalContent:{
-    alignItems:'center'
+    flex:1,
+  },
+  modalToggle:{
+    marginBottom:10,
+    borderWidth:1,
+    borderColor:'#f2f2f2',
+    padding:10,
+    borderRadius:10,
+    alignSelf:'center'
+  },
+  modalClose:{
+    marginTop:20,
+    marginBottom:0
   }
 })
