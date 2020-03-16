@@ -20,6 +20,11 @@ export default function Home({navigation}) {
     <View style={globalStyles.container}>
       <Modal visible={modalOpen}>
         <View style={styles.modalContent}>
+          <MaterialIcons
+          name='close'
+          size={24}
+          onPress={() => setModalOpen(false)}
+          />
           <Text>Hello from the modal :)</Text>
         </View>
       </Modal>
