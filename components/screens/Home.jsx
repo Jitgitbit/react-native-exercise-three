@@ -5,6 +5,7 @@ import { FlatList, TouchableOpacity } from 'react-native-gesture-handler'
 import Card from '../shared/Card'
 
 export default function Home({navigation}) {
+  const [modalOpen, setModalOpen] = useState(false)
   const [reviews, setReviews] = useState([
     {title:'Maverick', rating:2, body:'not bad', key:'1'},
     {title:'Good Midnight', rating:3, body:'not too bad', key:'2'},
@@ -16,7 +17,7 @@ export default function Home({navigation}) {
   // }
   return (
     <View style={globalStyles.container}>
-      <Modal visible={true}>
+      <Modal visible={modalOpen}>
         <View style={styles.modalContent}>
           <Text>Hello from the modal :)</Text>
         </View>
