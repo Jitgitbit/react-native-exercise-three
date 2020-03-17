@@ -10,9 +10,10 @@ export default function ReviewForm({addReview}) {
     <View style={globalStyles.container}>
       <Formik
       initialValues={{title:'', body:'', rating:''}}
-      onSubmit={(values) => {
-        addReview(values)
-        console.log(values)
+      onSubmit={(values, actions) => {
+        actions.resetForm();                       //==========>> We actually don't need this here because we already reset the form by 
+        addReview(values)                          //==========>> using onPress={() => setModalOpen(false)} , BUT it is nice to know and
+        console.log(values)                        //==========>> use when the form is not in a modal f.e., but on the same screen !!!!!
       }}
       >
         {(formikProps) => (
