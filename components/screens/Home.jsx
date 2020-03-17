@@ -13,6 +13,13 @@ export default function Home({navigation}) {
     {title:'Good Midnight', rating:3, body:'not too bad', key:'2'},
     {title:'Lord of the Rings', rating:4, body:'too long', key:'3'}
   ])
+  const addReview = (review) => {
+    review.key = Math.random().toString();           // just a very small app, no need to overcomplicate
+    setReviews((currentReviews) => {
+      return [review, ...currentReviews];
+    });
+    setModalOpen(false);
+  }
   // const pressHandler = () => {
   //   navigation.navigate('ReviewDetails'); // does the same as .push !!
   //   // navigation.push('ReviewDetails');
