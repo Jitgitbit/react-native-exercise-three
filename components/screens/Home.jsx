@@ -34,7 +34,7 @@ export default function Home({navigation}) {
           style={{ ...styles.modalToggle, ...styles.modalClose}}
           onPress={() => setModalOpen(false)}
           />
-          <ReviewForm/>
+          <ReviewForm addReview={addReview}/>
         </View>
       </Modal>
       <MaterialIcons
