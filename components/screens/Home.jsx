@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import { View, Text, StyleSheet, Button, ImageBackground, Modal } from 'react-native'
+import { View, Text, StyleSheet, Button, ImageBackground, Modal, Keyboard } from 'react-native'
 import { globalStyles } from '../../styles/global'
-import { FlatList, TouchableOpacity } from 'react-native-gesture-handler'
+import { FlatList, TouchableOpacity, TouchableWithoutFeedback } from 'react-native-gesture-handler'
 import Card from '../shared/Card'
 import {MaterialIcons} from '@expo/vector-icons'
 import ReviewForm from './ReviewForm'
@@ -26,17 +26,19 @@ export default function Home({navigation}) {
   // }
   return (
     <View style={globalStyles.container}>
-      <Modal visible={modalOpen} animationType='slide'>
-        <View style={styles.modalContent}>
-          <MaterialIcons
-          name='close'
-          size={24}
-          style={{ ...styles.modalToggle, ...styles.modalClose}}
-          onPress={() => setModalOpen(false)}
-          />
-          <ReviewForm addReview={addReview}/>
-        </View>
-      </Modal>
+      <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+        <Modal visible={modalOpen} animationType='slide'>
+          <View style={styles.modalContent}>
+            <MaterialIcons
+            name='close'
+            size={24}
+            style={{ ...styles.modalToggle, ...styles.modalClose}}
+            onPress={() => setModalOpen(false)}
+            />
+            <ReviewForm addReview={addReview}/>
+          </View>
+        </Modal>
+      </TouchableWithoutFeedback>  
       <MaterialIcons
       name='add'
       size={24}
