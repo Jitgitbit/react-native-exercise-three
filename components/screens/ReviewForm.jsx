@@ -34,6 +34,7 @@ export default function ReviewForm() {
             placeholder='Rating (1-5)'
             onChangeText={formikProps.handleChange('rating')}       // =====> handles the state for us behind the scenes !!!
             value={formikProps.values.rating}                       // =====> two way data binding !!!
+            keyboardType='numeric'
             />
             <Button title='submit' color='maroon' onPress={formikProps.handleSubmit}/>
           </View>
