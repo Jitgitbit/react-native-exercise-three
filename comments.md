@@ -4,3 +4,4 @@ expo install react-native-gesture-handler react-native-reanimated react-native-s
 ➜  react-native-exercise-three git:(master) ✗ npm install react-navigation 
 ➜  react-native-exercise-three git:(master) npm install react-navigation-drawer
 npm install formik
+npm install yup
