@@ -45,7 +45,7 @@ export default function ReviewForm({addReview}) {
             />
             <Text style={globalStyles.errorText}>{formikProps.touched.title && formikProps.errors.title}</Text>
             <TextInput
-            multiline
+            multiline minHeight={80}
             style={globalStyles.input}
             placeholder='Review'
             onChangeText={formikProps.handleChange('body')}       // =====> handles the state for us behind the scenes !!!
