@@ -40,6 +40,7 @@ export default function ReviewForm({addReview}) {
             placeholder='Review Title'
             onChangeText={formikProps.handleChange('title')}       // =====> handles the state for us behind the scenes !!!
             value={formikProps.values.title}                       // =====> two way data binding !!!
+            onBlur={formikProps.handleBlur('title')}               // =====> onBlur, more real-time validation !!!!!
             />
             <Text style={globalStyles.errorText}>{formikProps.touched.title && formikProps.errors.title}</Text>
             <TextInput
@@ -48,6 +49,7 @@ export default function ReviewForm({addReview}) {
             placeholder='Review'
             onChangeText={formikProps.handleChange('body')}       // =====> handles the state for us behind the scenes !!!
             value={formikProps.values.body}                       // =====> two way data binding !!!
+            onBlur={formikProps.handleBlur('body')}
             />
             <Text style={globalStyles.errorText}>{formikProps.touched.body && formikProps.errors.body}</Text>
             <TextInput
@@ -55,6 +57,7 @@ export default function ReviewForm({addReview}) {
             placeholder='Rating (1-5)'
             onChangeText={formikProps.handleChange('rating')}       // =====> handles the state for us behind the scenes !!!
             value={formikProps.values.rating}                       // =====> two way data binding !!!
+            onBlur={formikProps.handleBlur('rating')}
             keyboardType='numeric'
             />
             <Text style={globalStyles.errorText}>{formikProps.touched.rating && formikProps.errors.rating}</Text>
