@@ -41,7 +41,7 @@ export default function ReviewForm({addReview}) {
             onChangeText={formikProps.handleChange('title')}       // =====> handles the state for us behind the scenes !!!
             value={formikProps.values.title}                       // =====> two way data binding !!!
             />
-            <Text style={globalStyles.errorText}>{formikProps.errors.title}</Text>
+            <Text style={globalStyles.errorText}>{formikProps.touched.title && formikProps.errors.title}</Text>
             <TextInput
             multiline
             style={globalStyles.input}
@@ -49,7 +49,7 @@ export default function ReviewForm({addReview}) {
             onChangeText={formikProps.handleChange('body')}       // =====> handles the state for us behind the scenes !!!
             value={formikProps.values.body}                       // =====> two way data binding !!!
             />
-            <Text style={globalStyles.errorText}>{formikProps.errors.body}</Text>
+            <Text style={globalStyles.errorText}>{formikProps.touched.body && formikProps.errors.body}</Text>
             <TextInput
             style={globalStyles.input}
             placeholder='Rating (1-5)'
@@ -57,7 +57,7 @@ export default function ReviewForm({addReview}) {
             value={formikProps.values.rating}                       // =====> two way data binding !!!
             keyboardType='numeric'
             />
-            <Text style={globalStyles.errorText}>{formikProps.errors.rating}</Text>
+            <Text style={globalStyles.errorText}>{formikProps.touched.rating && formikProps.errors.rating}</Text>
             <Button title='submit' color='maroon' onPress={formikProps.handleSubmit}/>
           </View>
         )}
