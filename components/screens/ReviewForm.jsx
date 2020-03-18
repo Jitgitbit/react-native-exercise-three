@@ -1,12 +1,12 @@
 import React from 'react'
 import { globalStyles } from '../../styles/global'
 import { View, Text, StyleSheet, Button, ImageBackground, Modal } from 'react-native'
-import {Formik} from 'formik'
+import {Formik, validateYupSchema} from 'formik'
 import { TextInput } from 'react-native-gesture-handler'
 import * as yup from 'yup';
 
 
-const ReviewSchema = yup.object({
+const reviewSchema = yup.object({
   title: yup.string()
     .required()
     .min(4),
@@ -26,6 +26,7 @@ export default function ReviewForm({addReview}) {
     <View style={globalStyles.container}>
       <Formik
       initialValues={{title:'', body:'', rating:''}}
+      validationSchema={reviewSchema}
       onSubmit={(values, actions) => {
         actions.resetForm();                       //==========>> We actually don't need this here because we already reset the form by 
         addReview(values)                          //==========>> using onPress={() => setModalOpen(false)} , BUT it is nice to know and
